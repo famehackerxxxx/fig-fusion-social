@@ -31,21 +31,6 @@ const AboutPage: React.FC = () => {
     }
   ];
 
-  const featureCards = [
-    {
-      title: "A Community that Cares",
-      description: "Connect with a tribe of like-minded individuals who are committed to growth, personal development, and supporting one another on their journeys."
-    },
-    {
-      title: "Tools & Opportunities for Growth",
-      description: "Access unique insights and practical tools that will help you navigate challenges, seize opportunities, and unlock your fullest potential."
-    },
-    {
-      title: "Inspiration at Every Step",
-      description: "Find guidance and motivation from those who have walked similar paths and overcome comparable obstacles to achieve their vision of success."
-    }
-  ];
-
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -87,45 +72,39 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Why Join Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Why Join Section - Exactly as shown in the image */}
+      <section className="py-16 bg-[#FFD046]">
         <div className="container mx-auto px-4">
-          <h2 className="section-heading text-center">Why Join HiveWire Tribe?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {featureCards.map((card, index) => (
-              <Card 
-                key={index} 
-                color={index === 0 ? "blue" : index === 1 ? "yellow" : "white"}
-                className="h-full"
-              >
-                <h3 className="text-xl font-semibold mb-4 text-hivewire-dark">
-                  {card.title}
-                </h3>
-                <p className="text-gray-600">
-                  {card.description}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="section-heading text-center">Our Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-40 h-40 rounded-lg object-cover"
-                />
-                <h3 className="font-semibold text-xl mt-4 text-hivewire-dark">{member.name}</h3>
-                <p className="text-hivewire-darkblue">{member.title}</p>
-              </div>
-            ))}
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-black">
+            Why Join HiveWire Tribe?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-[#9DD3DD] rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4 text-center">
+                A Community that Cares
+              </h3>
+              <p className="text-center text-sm">
+                HiveWire Tribe is more than a platform—it's a movement. Our inclusive and diverse space allows you to share, learn, and grow in an environment that values authenticity and connection.
+              </p>
+            </div>
+            
+            <div className="bg-[#9DD3DD] rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4 text-center">
+                Tools & Opportunities for Growth
+              </h3>
+              <p className="text-center text-sm">
+                Access expert insights, build new skills, and connect with professionals for growth and collaboration.
+              </p>
+            </div>
+            
+            <div className="bg-[#9DD3DD] rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4 text-center">
+                Inspiration at Every Step
+              </h3>
+              <p className="text-center text-sm">
+                From exclusive events and challenges to engaging discussions and mentorship, HiveWire Tribe keeps you motivated and connected to the best version of yourself.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -164,6 +143,26 @@ const AboutPage: React.FC = () => {
                 We bring people together to build resilience—the capacity to recover quickly from difficulties; toughness in the face of challenges.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="section-heading text-center">Our Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-40 h-40 rounded-lg object-cover"
+                />
+                <h3 className="font-semibold text-xl mt-4 text-hivewire-dark">{member.name}</h3>
+                <p className="text-hivewire-darkblue">{member.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
