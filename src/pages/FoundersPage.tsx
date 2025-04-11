@@ -5,6 +5,7 @@ import Button from '../components/Atoms/Button';
 import PersonCard from '../components/Molecule/PersonCard';
 import ContactForm from '../components/Organism/ContactForm';
 import ContactInfo from '../components/Molecule/ContactInfo';
+import ImageGrid from '../components/Molecule/ImageGrid';
 
 const FoundersPage: React.FC = () => {
   const founders = [
@@ -22,15 +23,43 @@ const FoundersPage: React.FC = () => {
     }
   ];
 
-  const journeyImages = [
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
+  const culturalImages = [
+    {
+      src: "/placeholder.svg",
+      alt: "Women in traditional cultural dress"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "People viewing an art exhibit in a museum"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Traditional dance celebration in a field"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Cultural celebration at Machu Picchu"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Diverse group of people celebrating together"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Person with flower crown in natural setting"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "People enjoying a sunset by the water"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Men in traditional cultural dress with turbans"
+    },
+    {
+      src: "/placeholder.svg",
+      alt: "Community gathering on a beach"
+    }
   ];
 
   return (
@@ -72,25 +101,15 @@ const FoundersPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Journey Section */}
+      {/* Cultural Diversity Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-heading text-center">Capturing Our Journey</h2>
+          <h2 className="section-heading text-center">Celebrating Diversity</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Our team dedicated to creating impact has come so far, and we'd like to share our journey with you.
+            We are dedicated to creating an inclusive space where professionals can thrive, learn, and inspire each other to reach new heights.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {journeyImages.slice(0, 6).map((img, index) => (
-              <div key={index} className="overflow-hidden rounded-lg">
-                <img 
-                  src={img} 
-                  alt={`Journey image ${index + 1}`} 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
+          <ImageGrid images={culturalImages} className="max-w-6xl mx-auto" />
         </div>
       </section>
 
