@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +91,56 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hivewire-gradient {
+  background: linear-gradient(180deg, #9DD3DD 0%, #7ABEC9 100%);
+}
+
+.btn-yellow {
+  @apply bg-hivewire-yellow text-hivewire-dark font-medium py-2 px-6 rounded-full 
+  hover:brightness-95 transition-all duration-200;
+}
+
+.btn-blue {
+  @apply bg-hivewire-blue text-hivewire-dark font-medium py-2 px-6 rounded-full 
+  hover:brightness-95 transition-all duration-200;
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold mb-6 text-hivewire-dark;
+}
+
+.section-subheading {
+  @apply text-xl md:text-2xl font-medium mb-4 text-hivewire-dark;
 }
