@@ -5,16 +5,22 @@ import Footer from '../components/Organism/Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
+  hideNav?: boolean;
+  hideFooter?: boolean;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ 
+  children, 
+  hideNav = false,
+  hideFooter = false 
+}) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      {!hideNav && <Header />}
       <main className="flex-grow">
         {children}
       </main>
-      <Footer />
+      {!hideFooter && <Footer />}
     </div>
   );
 };
