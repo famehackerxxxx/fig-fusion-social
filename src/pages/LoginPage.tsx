@@ -7,7 +7,7 @@ import Card from '@/components/Molecule/Card';
 
 const LoginPage = () => {
   return (
-    <MainLayout>
+    <MainLayout hideNav={false} hideFooter={false}>
       <div className="min-h-screen bg-hivewire-yellow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <Card className="max-w-md w-full p-8 bg-white">
           <div className="flex flex-col items-center justify-center">

@@ -4,7 +4,7 @@ import { Menu, X, Search } from 'lucide-react';
 import Logo from '../Atoms/Logo';
 import NavItem from '../Molecule/NavItem';
 import Button from '../Atoms/Button';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +43,9 @@ const Header: React.FC = () => {
             <NavItem href="/founders" active={pathname === '/founders'}>
               Founders
             </NavItem>
-            <Button variant="yellow">Sign In</Button>
+            <Link to="/login">
+              <Button variant="yellow">Sign In</Button>
+            </Link>
           </nav>
 
           <button
@@ -81,9 +83,11 @@ const Header: React.FC = () => {
               <NavItem href="/founders" active={pathname === '/founders'}>
                 Founders
               </NavItem>
-              <Button variant="yellow" className="mt-2">
-                Sign In
-              </Button>
+              <Link to="/login">
+                <Button variant="yellow" className="mt-2 w-full">
+                  Sign In
+                </Button>
+              </Link>
             </div>
           </div>
         )}
