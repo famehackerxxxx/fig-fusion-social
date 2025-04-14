@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import LandingPage from './pages/LandingPage';
+import Feed from './pages/Feed';
 import AboutPage from './pages/AboutPage';
 import FoundersPage from './pages/FoundersPage';
 import LoginPage from './pages/LoginPage';
@@ -14,7 +15,8 @@ import NotFound from './pages/NotFound';
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/feed" element={<Feed />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/founders" element={<FoundersPage />} />
       <Route path="/login" element={<LoginPage />} />

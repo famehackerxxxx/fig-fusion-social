@@ -19,7 +19,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Logo size="md" />
+            <Logo size="md" showBee={true} />
           </div>
 
           <div className="hidden md:flex items-center space-x-1">
