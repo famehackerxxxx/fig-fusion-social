@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../layout/MainLayout';
@@ -11,21 +10,6 @@ const LandingPage: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-hivewire-blue py-16 px-4">
         <div className="container mx-auto text-center relative">
-          <img 
-            src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-            alt="Bee" 
-            className="absolute top-0 left-1/4 w-16 h-16 object-contain"
-          />
-          <img 
-            src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-            alt="Bee" 
-            className="absolute top-20 right-1/4 w-16 h-16 object-contain"
-          />
-          <img 
-            src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-            alt="Bee" 
-            className="absolute bottom-0 left-1/3 w-16 h-16 object-contain"
-          />
           
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-hivewire-dark max-w-3xl mx-auto">
             Empower & Grow<br />
@@ -73,21 +57,6 @@ const LandingPage: React.FC = () => {
 
       {/* About Section */}
       <section className="py-16 px-4 bg-hivewire-yellow relative">
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute top-10 left-10 w-16 h-16 object-contain"
-        />
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute bottom-20 right-20 w-16 h-16 object-contain"
-        />
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute top-1/2 right-1/4 w-16 h-16 object-contain"
-        />
         
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -144,16 +113,6 @@ const LandingPage: React.FC = () => {
 
       {/* Call to Action Section */}
       <section className="py-16 px-4 bg-hivewire-blue relative">
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute top-10 left-1/4 w-16 h-16 object-contain"
-        />
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute bottom-10 right-1/4 w-16 h-16 object-contain"
-        />
         
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-hivewire-dark">
@@ -167,21 +126,6 @@ const LandingPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4 bg-hivewire-yellow relative">
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute top-20 left-20 w-16 h-16 object-contain"
-        />
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute top-20 right-20 w-16 h-16 object-contain"
-        />
-        <img 
-          src="/lovable-uploads/5ca6d17f-4f8f-4d6d-8158-3955f101842c.png" 
-          alt="Bee" 
-          className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-16 h-16 object-contain"
-        />
         
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-hivewire-dark">
