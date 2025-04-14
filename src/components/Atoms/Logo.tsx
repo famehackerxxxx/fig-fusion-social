@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
   showBee?: boolean;
+  className?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false }) => {
+const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false, className = '' }) => {
   const sizeClasses = {
     sm: 'h-8',
     md: 'h-12',
@@ -15,12 +16,20 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false }) => {
   };
 
   return (
-    <Link to="/" className="flex items-center">
+    <Link to="/" className={`flex items-center ${className}`}>
       <div className="relative">
-        <img 
-          src="/lovable-uploads/320bf789-30c8-4631-9fd2-0e7fdde0d7e4.png" 
-          alt="HiveWire Logo" 
-          className={`${sizeClasses[size]} rounded-full object-contain`}
+        <div 
+          className="absolute" 
+          style={{
+            width: '111px',
+            height: '122px',
+            left: 'calc(50% - 111px/2 + 0.5px)',
+            top: 'calc(50% - 122px/2 - 0.5px)',
+            background: 'url(/lovable-uploads/320bf789-30c8-4631-9fd2-0e7fdde0d7e4.png)',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }}
         />
         
         {showBee && (
