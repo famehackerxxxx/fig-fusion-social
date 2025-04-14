@@ -25,7 +25,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false, className = '
             height: '122px',
             left: 'calc(50% - 111px/2 + 0.5px)',
             top: 'calc(50% - 122px/2 - 0.5px)',
-            background: 'url(/lovable-uploads/320bf789-30c8-4631-9fd2-0e7fdde0d7e4.png)',
+            background: 'url(/lovable-uploads/a74a80df-f09f-46ad-a55c-0c1f61f5e43b.png)',
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
