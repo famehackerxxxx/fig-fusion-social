@@ -17,6 +17,8 @@ const AppRoutes: React.FC = () => {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/feed" element={<Feed />} />
+      <Route path="/resources" element={<Feed />} /> {/* Temporary route, replace with proper component later */}
+      <Route path="/events" element={<Feed />} /> {/* Temporary route, replace with proper component later */}
       <Route path="/about" element={<AboutPage />} />
       <Route path="/founders" element={<FoundersPage />} />
       <Route path="/login" element={<LoginPage />} />

@@ -7,10 +7,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { Calendar, Heart, MessageSquare, Share2, MoreHorizontal } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { ScrollArea } from '../components/ui/scroll-area';
+import FeedHeader from '../components/Organism/FeedHeader';
 
 const Feed: React.FC = () => {
   return (
-    <MainLayout>
+    <MainLayout hideNav={true} hideFooter={false}>
+      <FeedHeader pageTitle="Career" showBackButton={true} />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Sidebar - Profile */}
