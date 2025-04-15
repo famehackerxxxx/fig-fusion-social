@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
-  showBee?: boolean;
   className?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false, className = '' }) => {
+const Logo: React.FC<LogoProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
     sm: 'h-8',
     md: 'h-12',
@@ -31,11 +30,10 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false, className = '
             backgroundPosition: 'center'
           }}
         />
-        
-        {/* The bee images have been removed from the component and added as a fixed element in index.html */}
       </div>
     </Link>
   );
 };
 
 export default Logo;
+
