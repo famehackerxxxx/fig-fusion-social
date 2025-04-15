@@ -32,7 +32,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', showBee = false, className = '
           }}
         />
         
-        {/* Removed the bee image that was here */}
+        {/* The bee images have been removed from the component and added as a fixed element in index.html */}
       </div>
     </Link>
   );

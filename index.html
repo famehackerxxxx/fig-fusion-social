@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,12 +16,51 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <style>
+      #flying-bee {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        pointer-events: none; /* So it doesn't block clicks */
+      }
+
+      #flying-bee img {
+        width: 60px;
+        animation: hover 2s ease-in-out infinite;
+      }
+
+      @keyframes hover {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+      }
+    </style>
   </head>
 
   <body>
     <div id="root"></div>
+    <div id="flying-bee">
+      <img src="https://i.imgur.com/R9zU4ej.png" alt="Flying Bee">
+    </div>
+
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const bee = document.getElementById('flying-bee');
+        
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+          const zigzag = Math.sin(scrollY / 50) * 50; // Zigzag effect
+          bee.style.top = (20 + scrollY * 0.5) + 'px'; // Move down with scroll
+          bee.style.left = `calc(50% + ${zigzag}px)`; // Zigzag sideways
+        });
+      });
+    </script>
   </body>
 </html>
